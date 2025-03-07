@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Museo Remedios</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <div class="logo">
+        <img src="images/logo.png" alt="Museo Remedios Logo" />
+      </div>
+      <ul>
+        <li>
+          <a href="#hero" title="Inicio"><i class="fas fa-home"></i></a>
+        </li>
+        <li>
+          <a href="#reservaciones" title="Reservaciones"
+            ><i class="fas fa-ticket-alt"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#colecciones" title="Colecciones"
+            ><i class="fas fa-landmark"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#piezas" title="piezas"><i class="fas fa-paintbrush"></i></a>
+        </li>
+        <li>
+          <a href="#reservaciones" title="Planos"><i class="fas fa-map"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="hero">
+        <div class="hero-content">
+          <h1>Museo</h1>
+          <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Remedios</h1>
+          <center>
+            <div
+              class="opening-hours"
+              style="
+                background-color: rgba(0, 0, 0, 0.541);
+                border-radius: 10px;
+              "
+            >
+              <p>Abierto:</p>
+              <p>Lunes - Sábado 9:00 - 18:00</p>
+              <p>Domingo 9:00 - 15:00</p>
+            </div>
+          </center>
+        </div>
+      </section>
+
+      <!-- Welcome Section -->
+      <section class="welcome">
+        <div class="container">
+          <div class="welcome-content">
+            <h2>Bienvenido</h2>
+            <p>
+              Bienvenidos al Museo de Antigüedades, un espacio donde el pasado
+              cobra vida y la historia se convierte en una experiencia
+              inolvidable. Nos complace abrirles las puertas a un mundo
+              fascinante donde cada objeto cuenta una historia, cada rincón
+              guarda un secreto y cada pieza restaurada refleja el arduo trabajo
+              de conservación que permite mantener viva nuestra herencia
+              cultural. Aquí, encontrarán una colección cuidadosamente
+              seleccionada de antigüedades que han sido rescatadas, restauradas
+              y preservadas para que puedan apreciarlas en todo su esplendor.
+              Desde artefactos históricos hasta reliquias de civilizaciones
+              antiguas, cada exhibición ha sido preparada con el máximo detalle
+              para transportarlos a épocas pasadas. Nuestro equipo de expertos
+              ha trabajado meticulosamente en la restauración de muchas de estas
+              piezas, devolviéndoles su belleza y permitiendo que las nuevas
+              generaciones disfruten de su legado. Además, queremos que su
+              visita sea más que una simple observación de objetos; por eso,
+              hemos diseñado un recorrido especial que les permitirá sumergirse
+              completamente en la historia y conocer a fondo la importancia de
+              cada pieza expuesta.
+            </p>
+            <div
+              style="
+                border-bottom: 2px solid #e3995f;
+                width: max-content;
+                padding-bottom: 10px;
+              "
+            >
+              <a href="#" class="btn-gold">Visitanos</a>
+            </div>
+          </div>
+          <div class="welcome-image">
+            <img
+              src="images/bienvenido.png"
+              alt="Interior del Museo Remedios"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Collections Section -->
+      <section id="colecciones" class="collections">
+        <div class="container">
+          <center>
+            <h2>Colecciones</h2>
+          </center>
+
+          <div class="collections-slider">
+            <div class="collection-item">
+              <img src="images/tecanela.png" alt="Colección Religiosa" />
+              <div class="collection-info">
+                <h3>Monedas</h3>
+                <p class="collection-description">
+                  Piezas históricas que reflejan la evolución del comercio y la
+                  economía.
+                </p>
+                <!-- <h4>Arte Religioso Original</h4> -->
+              </div>
+            </div>
+
+            <div class="collection-item active">
+              <img src="images/santo.jpg" alt="Colección Arte Sacro" />
+              <div class="collection-info">
+                <h3>Arte Sacro</h3>
+                <p class="collection-description">
+                  Esculturas, pinturas y objetos litúrgicos de gran valor
+                  espiritual.
+                </p>
+                <!-- <p>Exhibición Permanente</p> -->
+                <!-- <p class="collection-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ex purus. Pellentesque justo eros, venenatis lectus sed et, porta a, maximus tortor magna. In gravida enim, hendrerit eget, volutpat quis, dignissim quis.</p> -->
+              </div>
+            </div>
+
+            <div class="collection-item">
+              <img src="images/escudo.jpg" alt="Colección Histórica" />
+              <div class="collection-info">
+                <h3>Objetos del Siglo</h3>
+                <p class="collection-description">
+                  Artículos cotidianos que muestran la vida y costumbres del
+                  pasado.
+                </p>
+              </div>
+            </div>
+
+            <div class="collection-item">
+              <img src="images/santo2.jpg" alt="Colección Arqueológica" />
+              <div class="collection-info">
+                <h3>Arqueología</h3>
+                <p class="collecion-description">
+                  Reliquias de antiguas civilizaciones que revelan nuestro
+                  legado histórico.
+                </p>
+              </div>
+            </div>
+
+            <div class="slider-controls">
+              <button class="prev"><i class="fas fa-chevron-left"></i></button>
+              <button class="next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="imgfondo">
+        <center><img src="images/logo.png" alt="" srcset="" /></center>
+      </div>
+      <!-- Our Pieces Section -->
+      <section class="our-pieces" id="piezas">
+        <div class="container">
+          <center>
+            <h2>Nuestras Piezas</h2>
+          </center>
+
+          <div class="pieces-slider">
+            <div class="piece-item active">
+              <img src="images/virgen.jpg" alt="Virgen de la Soledad" />
+              <div class="piece-info">
+                <h3>Virgen de la Soledad</h3>
+                <h4>Siglo XIX</h4>
+                <p>
+                  Pieza representativa de la colección religiosa del museo.
+                  Tallada en madera y decorada con hoja de oro. El rostro es de
+                  gran belleza y detalle. El manto es de terciopelo negro
+                  bordado con hilos de oro. Esta pieza es un ejemplo del arte
+                  religioso del siglo XIX, con el estilo barroco característico
+                  de la época. Fue restaurada en el año 2010 por especialistas,
+                  para la conservación de elementos de materiales y colores como
+                  madera y resina, que son de interés.
+                </p>
+                <a href="#" class="btn-gold">Leer Más</a>
+              </div>
+            </div>
+            <div class="piece-item active">
+              <img src="images/cruz.jpg" alt="Virgen de la Soledad" />
+              <div class="piece-info">
+                <h3>Cristo de plata y oro laminado</h3>
+                <h4>Siglo XIX</h4>
+                <p>
+                  Pieza que se incorpora al Museo Remedios de Pénjamo, cristo de plata y oro laminado.
+                </p>
+                <a href="#" class="btn-gold">Leer Más</a>
+              </div>
+            </div>
+            <div class="piece-item active">
+              <img src="images/escudo.jpg" alt="Virgen de la Soledad" />
+              <div class="piece-info">
+                <h3>Retablo de Querubines en Madera</h3>
+                <h4>Siglo XIII</h4>
+                <p>
+                  Después de casi un año de su hallazgo, nos regresa el INAH
+                  después de su restauración del retablo de 60 CM x 45 CM de
+                  Querubines en Madera de Mezquite, está estofada. La pieza es
+                  probablemente de finales del siglo XIII, por lo que podría
+                  haber llegado con los conquistadores, ya que su diseño de
+                  acuerdo a la investigación es similar al de las pilastras del
+                  Martirio de la Santa Leocadia en Toledo, España. Siendo está
+                  virgen del siglo III.
+                </p>
+                <a href="#" class="btn-gold">Leer Más</a>
+              </div>
+            </div>
+            <div class="piece-item active">
+              <img src="images/santo2.jpg" alt="Virgen de la Soledad" />
+              <div class="piece-info">
+                <h3>Virgen virreinal</h3>
+                <h4>Siglo XVI</h4>
+                <p>
+                  Los materiales de acuerdo a la casa restauradora son: Madera
+                  de Balsa, pasta de caña y tela de algodón con encaje de seda,
+                  corona aún en restauración de oro sólido de 21 kilates.
+                  Encontrada a 15 metros de profundidad del túnel. A un costado
+                  de 4 gavetas en el túnel Remedios. Pieza que será parte de la
+                  exhibición.
+                </p>
+                <a href="#" class="btn-gold">Leer Más</a>
+              </div>
+            </div>
+            <div class="piece-item active">
+              <img src="images/santo.jpg" alt="Virgen de la Soledad" />
+              <div class="piece-info">
+                <h3>Virgen de la Soledad</h3>
+                <h4>Siglo XIX</h4>
+                <p>
+                  Pieza virreinal del siglo XVII que nos entregaron después de
+                  su restauración y conservación. Para que esté exhibida en
+                  nuestra galería de arte sacro.
+                </p>
+                <a href="#" class="btn-gold">Leer Más</a>
+              </div>
+            </div>
+
+            <div class="pieces-thumbnails">
+              <div class="thumbnail active" data-index="0">
+                <img src="images/virgen.jpg" alt="Virgen de la Soledad" />
+              </div>
+              <div class="thumbnail" data-index="1">
+                <img src="images/cruz.jpg" alt="Cruz" />
+              </div>
+              <div class="thumbnail" data-index="2">
+                <img src="images/escudo.jpg" alt="Artefacto" />
+              </div>
+              <div class="thumbnail" data-index="3">
+                <img src="images/santo2.jpg" alt="Estatua" />
+              </div>
+              <div class="thumbnail" data-index="4">
+                <img src="images/santo.jpg" alt="Cristo" />
+              </div>
+            </div>
+
+            <div class="slider-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
+            <div class="slider-arrows">
+              <button class="prev"><i class="fas fa-chevron-left"></i></button>
+              <button class="next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reservations Section -->
+      <section id="reservaciones" class="reservations">
+        <div class="container">
+          <h2>Reservaciones</h2>
+
+          <div class="reservations-content">
+            <div class="opening-hosurs">
+              <h3>Abierto:</h3>
+              <p>Lunes - Sábado 9:00 - 18:00</p>
+              <p>Domingo 9:00 - 15:00</p>
+              <a
+                href="#"
+                class="btn-gold"
+                style="float: right; position: relative; top: -10vh"
+                >Comprar Boletos</a
+              >
+              <br /><br />
+              <div class="googlemapa" id="googlemapa">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.887045035578!2d-101.72004682466056!3d20.428728981074773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842c1348bb531d39%3A0xeb1648cc263e3ef0!2sDorichangos!5e0!3m2!1sen!2smx!4v1740708938145!5m2!1sen!2smx"
+                  width="300"
+                  height="250"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <div class="address">
+                <p>Arteaga #110</p>
+                <p>Zona Centro, Pénjamo, Gto.</p>
+                <h4>Contacto:</h4>
+                <p>+52 469-126-5669</p>
+                <p>info@museoremedios.com</p>
+              </div>
+            </div>
+
+            <div class="map-container">
+              <div class="map">
+                <img src="images/mapa.png" alt="Mapa del Museo" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Museo Remedios Logo" />
+        </div>
+
+        <div class="footer-links">
+          <a href="#">Contacto</a>
+          <a href="#">Comprar Boletos</a>
+          <a href="#">Exposiciones</a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/1AHXVGUvhs/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
