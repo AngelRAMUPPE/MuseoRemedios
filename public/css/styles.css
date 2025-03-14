@@ -138,16 +138,29 @@ a:hover {
 /* Hero Section */
 .hero {
   height: 100vh;
-  background-image: url("../images/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 0;
+}
 
+.hero-slide.active {
+  opacity: 1;
+}
 .hero::before {
   content: "";
   position: absolute;
@@ -155,18 +168,19 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
 }
 
 .hero h1 {
   font-size: 10rem;
-  font-weight: 700;
+  font-weight: 400;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 2rem;
@@ -236,34 +250,38 @@ a:hover {
   z-index: 1;
 }
 
-.collections-slider {
-  position: relative;
-  display: flex;
-  overflow: hidden;
-  margin: 0 -1rem;
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 .collection-item {
-  flex: 0 0 25%;
-  padding: 0 1rem;
-  transition: all 0.5s ease;
-  opacity: 0.6;
-  transform: scale(0.9);
+  opacity: 1;
+  transform: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--dark);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.collection-item.active {
-  opacity: 1;
-  transform: scale(1);
+.collection-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .collection-item img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
-  border-radius: 5px;
-  margin-bottom: 1rem;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 0;
 }
-
+.collection-info {
+  padding: 1.5rem;
+}
 .collection-info h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
@@ -358,6 +376,7 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
+  padding-left: 10rem
 }
 
 .piece-item.active {
@@ -365,7 +384,7 @@ a:hover {
 }
 
 .piece-item img {
-  width: 100%;
+  width: 70%;
   height: auto;
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
