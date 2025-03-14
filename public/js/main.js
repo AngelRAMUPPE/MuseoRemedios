@@ -1,31 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  
-  // Collections Slider
-  const collectionsSlider = document.querySelector(".collections-slider")
-  const collectionItems = document.querySelectorAll(".collection-item")
-  const collectionPrev = document.querySelector(".collections-slider .prev")
-  const collectionNext = document.querySelector(".collections-slider .next")
+  // Hero Carousel
+  const heroSlides = document.querySelectorAll(".hero-slide")
+  let currentHeroSlide = 0
 
-  let currentCollectionIndex = 1 // Start with the second item active
-
-  function updateCollectionSlider() {
-    collectionItems.forEach((item, index) => {
-      item.classList.remove("active")
-      if (index === currentCollectionIndex) {
-        item.classList.add("active")
-      }
-    })
+  function nextHeroSlide() {
+    heroSlides[currentHeroSlide].classList.remove("active")
+    currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length
+    heroSlides[currentHeroSlide].classList.add("active")
   }
 
-  collectionPrev?.addEventListener("click", () => {
-    currentCollectionIndex = (currentCollectionIndex - 1 + collectionItems.length) % collectionItems.length
-    updateCollectionSlider()
-  })
-
-  collectionNext?.addEventListener("click", () => {
-    currentCollectionIndex = (currentCollectionIndex + 1) % collectionItems.length
-    updateCollectionSlider()
-  })
+  // Change slide every 5 seconds
+  setInterval(nextHeroSlide, 5000)
 
   // Our Pieces Slider
   const pieceItems = document.querySelectorAll(".piece-item")
@@ -103,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   // Initialize sliders
-  updateCollectionSlider()
   updatePiecesSlider()
 })
 
