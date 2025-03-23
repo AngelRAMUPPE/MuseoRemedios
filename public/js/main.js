@@ -1,4 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Mobile Menu Toggle
+  const mobileMenuBtn = document.querySelector(".mobile-menu-btn")
+  const navLinks = document.querySelector(".nav-links")
+
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active")
+      // Toggle icon between bars and times
+      const icon = mobileMenuBtn.querySelector("i")
+      if (icon.classList.contains("fa-bars")) {
+        icon.classList.remove("fa-bars")
+        icon.classList.add("fa-times")
+      } else {
+        icon.classList.remove("fa-times")
+        icon.classList.add("fa-bars")
+      }
+    })
+  }
+
+  // Close mobile menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      navLinks &&
+      navLinks.classList.contains("active") &&
+      !navLinks.contains(e.target) &&
+      !mobileMenuBtn.contains(e.target)
+    ) {
+      navLinks.classList.remove("active")
+      const icon = mobileMenuBtn.querySelector("i")
+      icon.classList.remove("fa-times")
+      icon.classList.add("fa-bars")
+    }
+  })
   // Hero Carousel
   const heroSlides = document.querySelectorAll(".hero-slide")
   let currentHeroSlide = 0
