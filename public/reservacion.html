@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Museo Remedios</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/reservacion.css">k
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <nav class="topnav">
+      <div class="logo">
+        <a href="/"><img src="images/logo.png" alt="Museo Remedios Logo" /></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/" title="Inicio"><i class="fas fa-home"></i><span>Inicio</span></a></li>
+      </ul>
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="hero" style="height: 180px;">
+        <div class="hero-slide active" style="background-image: url('/images/hero.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('images/Entrada.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('images/Hero2.jpg');"></div>
+        <div class="hero-content">
+            <h2 style="color: white; font-size: 8vh;">Vive la historia</h2>
+        </div>
+      </section>
+
+      <!-- Welcome Section -->
+      <section class="welcome">
+        <div class="container" style="display: block;">
+          <div class="welcome-content">
+            <h2>Reserva Tu Tour Hoy</h2>
+            <p>
+              Bienvenidos al Museo de Antigüedades, un espacio donde el pasado
+              cobra vida y la historia se convierte en una experiencia
+              inolvidable. Nos complace abrirles las puertas a un mundo
+              fascinante donde cada objeto cuenta una historia, cada rincón
+              guarda un secreto y cada pieza restaurada refleja el arduo trabajo
+              de conservación que permite mantener viva nuestra herencia
+              cultural. Aquí, encontrarán una colección cuidadosamente
+              seleccionada de antigüedades que han sido rescatadas, restauradas
+              y preservadas para que puedan apreciarlas en todo su esplendor.
+              Desde artefactos históricos hasta reliquias de civilizaciones
+              antiguas, cada exhibición ha sido preparada con el máximo detalle
+              para transportarlos a épocas pasadas. Nuestro equipo de expertos
+              ha trabajado meticulosamente en la restauración de muchas de estas
+              piezas, devolviéndoles su belleza y permitiendo que las nuevas
+              generaciones disfruten de su legado. Además, queremos que su
+              visita sea más que una simple observación de objetos por eso,
+              hemos diseñado un recorrido especial que les permitirá sumergirse
+              completamente en la historia y conocer a fondo la importancia de
+              cada pieza expuesta.
+            </p>
+          </div> <br>
+          <div class="welcome-image">
+            <img
+              src="images/SecFotos.png"
+              alt="Interior del Museo Remedios"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="welcome">
+        <div class="container">
+          <div class="welcome-content">
+            <h2>Que incluye el Tour</h2>
+            <p>
+                Sumérgete en una experiencia única que despierta todos tus sentidos. Comienza tu aventura ingresando al misterioso túnel, donde cada paso te transportará a un mundo lleno de historia y secretos por descubrir. Continúa con un recorrido guiado por nuestra impresionante galería, donde un experto te revelará los relatos y detalles ocultos detrás de cada obra. Luego, disfruta de un momento especial con una exquisita cata de té de canela, dejando que su aroma y sabor te envuelvan. Para cerrar con broche de oro, déjate llevar por la belleza del Jardín del Galerón, un rincón mágico donde la naturaleza y la historia se fusionan para ofrecerte una experiencia inolvidable.
+            </p>
+          </div>
+          <div class="welcome-image">
+            <img
+              src="images/SecFotos2.png"
+              alt="Interior del Museo Remedios"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="welcome">
+        <div class="container">
+          <div class="welcome-content">
+            <h2>Reserva tu lugar</h2> <br>
+            <p class="titulo-precio">Precios</p>
+            <p class="tipo-boleto">Adultos</p>
+            <p class="precio-boleto">$45.00 / Boleto</p>
+            <p class="tipo-boleto">Niños</p>
+            <p class="precio-boleto">$30.00 / Boleto</p>
+            <p class="tipo-boleto">Bebes</p>
+            <p class="precio-boleto">Entrada gratis</p>
+            <br>
+            <div class="descuento">
+              <p style="color: #E3995F; font-weight: bold; font-size: larger;">Descuentos</p>
+              <p>10% para 7 personas en grupo <br>
+                15% para  7+  personas en grupo <br>
+                25% para escuelas en Grupo</p>
+            </div>
+          </div>
+          <div class="Boleto">
+            <center><h2 style="color: white;">Reservar Boleto</h2></center>
+            <div class="number-container">
+              <input type="number" class="number-input" min="1" max="7" placeholder="# Visitantes" id="ticketCount">
+              <div class="custom-arrows">
+                <div class="arrow-up" onclick="incrementValue()"></div>
+                <div class="arrow-down" onclick="decrementValue()"></div>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="nombre">Nombre Completo</label>
+              <input type="text" id="nombre">
+            </div> <br>
+            
+            <div class="form-group">
+              <label for="telefono">Número de teléfono</label>
+              <input type="tel" id="telefono">
+            </div> <br>
+            
+            <div class="form-group">
+              <label for="email">correo electrónico</label>
+              <input type="email" id="email" required>
+            </div>
+            
+            <button class="btn-next" id="btn-next">
+              Siguiente
+              <span class="arrow">›</span>
+            </button>
+          </div>
+
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Museo Remedios Logo" />
+        </div>
+
+        <div class="footer-links">
+          <a href="/404">Contacto</a>
+          <a href="/404">Comprar Boletos</a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/1AHXVGUvhs/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/reservacion.js"></script>
+  </body>
+</html>
